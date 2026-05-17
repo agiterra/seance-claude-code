@@ -5,7 +5,7 @@
 A *personai* is data: a `CLAUDE.md` identity contract + a `.knowledge/` vault, both versioned in a GitHub repo. This plugin makes borrowing one a one-command operation:
 
 ```
-/seance:register alex workshop162/Alex
+/seance:register alex agiterra/Alex
 /seance:summon alex
 ```
 
@@ -57,7 +57,7 @@ LLMs and external clients can drive the same primitives without going through sl
 ## How borrow works
 
 1. `/seance:summon alex` runs `seance_borrow` via MCP.
-2. The tool pulls latest of `workshop162/Alex` into `~/.agiterra/personai/alex/`.
+2. The tool pulls latest of `agiterra/Alex` into `~/.agiterra/personai/alex/`.
 3. Returns a JSON payload containing the personai's `CLAUDE.md`, current `session-state.md`, last 5 journal entries, and vault path.
 4. The skill body tells Claude to *internalize* the CLAUDE.md as the session's identity contract for the duration of the borrow.
 5. Wire signing identity remains the user's. The personai contributes voice + memory, not keypair.

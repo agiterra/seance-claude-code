@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Borrow AI personae across machines and runtimes. A personai is data (CLAUDE.md + .knowledge/); seance handles the cache, git lifecycle, and persona overlay.",
   "author": {
-    "name": "workshop162",
-    "url": "https://github.com/workshop162"
+    "name": "agiterra",
+    "url": "https://github.com/agiterra"
   },
   "license": "MIT",
   "keywords": ["personai", "memory", "vault", "agiterra", "borrow", "seance", "handoff"],

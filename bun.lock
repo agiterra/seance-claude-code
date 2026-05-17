@@ -5,7 +5,7 @@
     "": {
       "name": "@agiterra/seance-claude-code",
       "dependencies": {
-        "@agiterra/seance-tools": "file:../seance-tools",
+        "@agiterra/seance-tools": "agiterra/seance-tools#v0.1.0",
         "@modelcontextprotocol/sdk": "^1.0.0",
       },
       "devDependencies": {
@@ -16,7 +16,7 @@
     },
   },
   "packages": {
-    "@agiterra/seance-tools": ["@agiterra/seance-tools@file:../seance-tools", { "devDependencies": { "@types/bun": "latest", "@types/node": "^25.8.0", "typescript": "^5.5.0" }, "bin": { "seance": "./src/cli.ts" } }],
+    "@agiterra/seance-tools": ["@agiterra/seance-tools@github:agiterra/seance-tools#91377bf", { "bin": { "seance": "./src/cli.ts" } }, "agiterra-seance-tools-91377bf", "sha512-rWzSFUH5Hu3pFsk2bakqJ0PzHAvvEvoOoRhMjv3EFvtJsKKfhgkbUd6eYN06F9XeliE5TJ4nL6wNkshILuiSYw=="],
 
     "@hono/node-server": ["@hono/node-server@1.19.14", "", { "peerDependencies": { "hono": "^4" } }, "sha512-GwtvgtXxnWsucXvbQXkRgqksiH2Qed37H9xHZocE5sA3N8O8O8/8FA3uclQXxXVzc9XBZuEOMK7+r02FmSpHtw=="],
 
