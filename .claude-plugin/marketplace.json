@@ -1,0 +1,20 @@
+{
+  "name": "seance-claude-code",
+  "owner": {
+    "name": "workshop162",
+    "url": "https://github.com/agiterra"
+  },
+  "metadata": {
+    "description": "Self-marketplace for seance-claude-code during pre-release soak. Promotes to agiterra/claude-marketplace when ready."
+  },
+  "plugins": [
+    {
+      "name": "seance",
+      "source": {
+        "source": "github",
+        "repo": "agiterra/seance-claude-code"
+      },
+      "description": "Borrow AI personae across machines — git clone + persona overlay. Claude Code adapter."
+    }
+  ]
+}
