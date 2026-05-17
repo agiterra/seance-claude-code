@@ -4,7 +4,7 @@
   "description": "Claude Code adapter for the seance personai-borrow pattern. Compose on @agiterra/knowledge for multi-vault search.",
   "type": "module",
   "scripts": {
-    "start": "bun run server.ts"
+    "start": "bun install --no-summary && bun run server.ts"
   },
   "dependencies": {
     "@agiterra/seance-tools": "agiterra/seance-tools#v0.1.0",
