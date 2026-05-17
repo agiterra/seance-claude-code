@@ -7,7 +7,7 @@
     "start": "bun run server.ts"
   },
   "dependencies": {
-    "@agiterra/seance-tools": "file:../seance-tools",
+    "@agiterra/seance-tools": "agiterra/seance-tools#v0.1.0",
     "@modelcontextprotocol/sdk": "^1.0.0"
   },
   "devDependencies": {
