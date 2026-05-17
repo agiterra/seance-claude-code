@@ -13,13 +13,16 @@ After `summon`, your session takes on the personai's identity (voice, autonomy r
 
 ## Quick setup
 
-**Pre-release / direct install** (current — soak-testing before marketplace publish):
+**Pre-release direct install** (current — soak-testing before central marketplace publish):
+
+This repo is its own one-plugin marketplace.
 
 ```
-/plugin install agiterra/seance-claude-code
+/plugin marketplace add agiterra/seance-claude-code
+/plugin install seance@seance-claude-code
 ```
 
-**Once promoted to the agiterra marketplace** (TBD):
+**Once promoted to `agiterra/claude-marketplace`** (TBD — after v0.1.0 soak):
 
 ```
 /plugin marketplace add agiterra/claude-marketplace
