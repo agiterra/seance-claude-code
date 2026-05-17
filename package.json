@@ -1,0 +1,28 @@
+{
+  "name": "@agiterra/seance-claude-code",
+  "version": "0.1.0",
+  "description": "Claude Code adapter for the seance personai-borrow pattern. Compose on @agiterra/knowledge for multi-vault search.",
+  "type": "module",
+  "scripts": {
+    "start": "bun run server.ts"
+  },
+  "dependencies": {
+    "@agiterra/seance-tools": "file:../seance-tools",
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^25.8.0",
+    "typescript": "^5.5.0"
+  },
+  "files": [
+    "hooks/",
+    "skills/",
+    ".claude-plugin/",
+    ".mcp.json",
+    "server.ts",
+    "ensure-bun.sh"
+  ],
+  "license": "MIT",
+  "author": "workshop162"
+}

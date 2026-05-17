@@ -1,0 +1,14 @@
+{
+  "name": "seance",
+  "version": "0.1.0",
+  "description": "Borrow AI personae across machines and runtimes. A personai is data (CLAUDE.md + .knowledge/); seance handles the cache, git lifecycle, and persona overlay.",
+  "author": {
+    "name": "workshop162",
+    "url": "https://github.com/workshop162"
+  },
+  "license": "MIT",
+  "keywords": ["personai", "memory", "vault", "agiterra", "borrow", "seance", "handoff"],
+  "skills": "./skills/",
+  "postInstall": "bash ensure-bun.sh && bun install",
+  "postUpdate": "bash ensure-bun.sh && bun install"
+}
