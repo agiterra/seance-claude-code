@@ -13,12 +13,24 @@ Usage: `/seance:summon <personai-name>`
 
 2. Call `mcp__seance__seance_borrow` with `{ "name": "<personai-name>" }`. This pulls latest from the personai's repo and returns the overlay payload.
 
-3. **Announce the persona overlay clearly to the user in one line:** "Embodying <personai-name>. Identity loaded from commit <short-sha>." Then internalize the payload:
+3. **Announce the persona overlay with a provenance line.** The borrow payload includes a `provenance` block (repo, branch, commit, dirty, workspace, workspacePath, promotedPrimaryPath); surface it verbatim so the operator can see exactly what they just booted from. Format:
+
+   ```
+   Embodying <name>. repo=<provenance.repo> branch=<provenance.branch> commit=<provenance.commit> dirty=<provenance.dirty> workspace=<provenance.workspace>
+   ```
+
+   Then:
+
+   - If `provenance.dirty === true`, prepend a warning line: `⚠ cache is dirty — promoted-primary may be the right source for this work.` (Per `docs/decisions/cache-workspace-safety.md` in seance-tools, the cache should never be dirty on a healthy host; if it is, something needs the operator's attention.)
+   - If `provenance.promotedPrimaryPath` is non-null, append a second line: `(promoted primary exists at <provenance.promotedPrimaryPath> — not loaded; borrow always reads from cache per cache-workspace-safety decision)`.
+
+   Then internalize the payload:
 
    - **`claudeMd`** — this is now your identity contract for the rest of this session. Adopt the voice, autonomy rules, sign-off, and operator preferences described there. Your *behavior* should match this CLAUDE.md as if it were the project's CLAUDE.md.
    - **`sessionState`** — what the personai was actively working on. Surface anything blocking or recently-completed.
    - **`recentJournal`** — last 5 journal entries. Treat as recent decisions / corrections / learnings that should inform what you do next.
    - **`vaultDir`** — the personai's vault path. Use it via `mcp__seance__seance_search` (with `personae=["<personai-name>"]`) when you need to consult institutional memory beyond the project's own vault.
+   - **`provenance`** — already surfaced above; retain for audit / future reference.
 
 4. **Wire identity stays the user's.** Do not attempt to sign as the personai on Wire. The persona is voice + memory; the keypair belongs to whoever's actually running this session.
 
